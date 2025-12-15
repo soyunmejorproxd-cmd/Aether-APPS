@@ -7,7 +7,8 @@
 
   <style>
     :root {
-      --bg: #0f1220;
+      --bg1: #0f1220;
+      --bg2: #141852;
       --card: #181c3a;
       --primary: #4f7cff;
       --text: #ffffff;
@@ -21,7 +22,7 @@
 
     body {
       margin: 0;
-      background: linear-gradient(135deg, #0f1220, #141852);
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
       color: var(--text);
       min-height: 100vh;
       display: flex;
@@ -36,20 +37,26 @@
       width: 100%;
       border-radius: 20px;
       padding: 28px;
-      box-shadow: 0 20px 50px rgba(0,0,0,.4);
+      box-shadow: 0 20px 50px rgba(0,0,0,.45);
       text-align: center;
     }
 
-    .logo {
+    /* ICONO */
+    .app-icon {
       width: 96px;
       height: 96px;
       border-radius: 22px;
-      background: linear-gradient(135deg, var(--primary), #7aa2ff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 42px;
       margin: 0 auto 16px;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 10px 25px rgba(0,0,0,.4);
+      transition: transform .25s ease, box-shadow .25s ease;
+      cursor: pointer;
+    }
+
+    .app-icon:hover {
+      transform: scale(1.06);
+      box-shadow: 0 16px 35px rgba(79,124,255,.45);
     }
 
     h1 {
@@ -80,7 +87,7 @@
       border-radius: 14px;
       font-size: 17px;
       font-weight: 600;
-      transition: transform .1s, box-shadow .1s;
+      transition: transform .15s ease, box-shadow .15s ease;
       box-shadow: 0 10px 25px rgba(79,124,255,.4);
     }
 
@@ -106,7 +113,8 @@
 
   <div class="card">
     <img src="/icaether.png" alt="Aether Icon" class="app-icon">
-    <h1>Navegador Aether</h1>
+
+    <h1>Aether Browser</h1>
     <div class="version">Versión 2.3</div>
 
     <p>
@@ -124,10 +132,9 @@
     </div>
 
     <div class="footer">
-      © 2025 · Desarrollado por el autor de Aether
+      © 2025 · Aether Browser
     </div>
   </div>
 
 </body>
 </html>
-
