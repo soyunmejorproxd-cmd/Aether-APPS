@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>AetherPortsFanmade</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:
+    radial-gradient(circle at top,#1a2d6b 0%,#090b16 45%,#03040a 100%);
+
+    min-height:100vh;
+
+    color:white;
+
+    font-family:'Inter',sans-serif;
+
+    overflow-x:hidden;
+}
+
+/* =========================================
+NAVBAR
+========================================= */
+
+.navbar{
+
+    width:100%;
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 40px;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.logo img{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+}
+
+.logo h1{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:28px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+}
+
+.browser-btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:linear-gradient(135deg,#5d7cff,#8b5cff);
+
+    padding:14px 24px;
+
+    border-radius:16px;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.browser-btn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 25px rgba(108,132,255,.6);
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.hero{
+
+    width:100%;
+
+    padding:90px 30px 50px;
+
+    text-align:center;
+}
+
+.hero h2{
+
+    font-size:72px;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-weight:900;
+
+    background:linear-gradient(90deg,#fff,#80a7ff,#bc8cff);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:20px;
+}
+
+.hero p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-size:22px;
+
+    color:#d8ddff;
+
+    line-height:1.7;
+}
+
+/* =========================================
+PLATFORMS
+========================================= */
+
+.platforms{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-top:50px;
+}
+
+.platform{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:18px 28px;
+
+    border-radius:20px;
+
+    backdrop-filter:blur(10px);
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.platform:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.1);
+}
+
+/* =========================================
+PORTS SECTION
+========================================= */
+
+.section-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-top:80px;
+
+    margin-bottom:40px;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+.ports{
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+    padding:0 30px 80px;
+}
+
+.card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(12px);
+
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 0 35px rgba(100,140,255,.35);
+}
+
+.card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+}
+
+.card-content{
+
+    padding:25px;
+}
+
+.card h3{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+}
+
+.console{
+
+    color:#8ab0ff;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+}
+
+.description{
+
+    color:#d6d6d6;
+
+    line-height:1.6;
+
+    margin-bottom:22px;
+}
+
+.status{
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+}
+
+.dev{
+
+    background:#ffb347;
+
+    color:black;
+}
+
+.complete{
+
+    background:#4dff8d;
+
+    color:black;
+}
+
+.download-btn{
+
+    display:block;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    background:linear-gradient(135deg,#5d7cff,#9b5cff);
+
+    color:white;
+
+    padding:16px;
+
+    border-radius:18px;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.download-btn:hover{
+
+    transform:scale(1.03);
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+.footer{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#8f96b8;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+    background:rgba(0,0,0,.2);
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:700px){
+
+    .hero h2{
+
+        font-size:42px;
+    }
+
+    .hero p{
+
+        font-size:18px;
+    }
+
+    .navbar{
+
+        padding:0 18px;
+    }
+
+    .logo h1{
+
+        font-size:20px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- =====================================
+NAVBAR
+===================================== -->
+
+<div class="navbar">
+
+    <div class="logo">
+
+        <img src="icaether.png">
+
+        <h1>AetherPortsFanmade</h1>
+
+    </div>
+
+    <a class="browser-btn" href="https://aether-apps-six.vercel.app">
+
+        Ir a Aether Browser
+
+    </a>
+
+</div>
+
+<!-- =====================================
+HERO
+===================================== -->
+
+<section class="hero">
+
+    <h2>AETHER PORTS</h2>
+
+    <p>
+
+        Descarga ports fanmade de videojuegos para consolas retro y modernas.
+        Todos los ports son subidos manualmente por el creador de Aether.
+        Encuentra proyectos para GBA, NES, Wii, DS y más.
+
+    </p>
+
+    <div class="platforms">
+
+        <div class="platform">🎮 GBA</div>
+
+        <div class="platform">🕹️ NES</div>
+
+        <div class="platform">💿 Wii</div>
+
+        <div class="platform">📱 Android</div>
+
+        <div class="platform">🎲 Nintendo DS</div>
+
+        <div class="platform">🖥️ PC</div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+PORTS
+===================================== -->
+
+<h2 class="section-title">
+
+    Ports Disponibles
+
+</h2>
+
+<section class="ports">
+
+    <!-- =================================
+    FNF GBA
+    ================================= -->
+
+    <div class="card">
+
+        <img src="https://i.ytimg.com/vi/8Y7X2xA0x5Y/maxresdefault.jpg">
+
+        <div class="card-content">
+
+            <h3>Friday Night Funkin'</h3>
+
+            <div class="console">
+
+                Game Boy Advance
+
+            </div>
+
+            <div class="description">
+
+                Port fanmade de Friday Night Funkin para Game Boy Advance.
+                Incluye música sincronizada, gameplay funcional y optimizaciones
+                para hardware GBA real.
+
+            </div>
+
+            <div class="status dev">
+
+                EN DESARROLLO
+
+            </div>
+
+            <a class="download-btn" href="#">
+
+                Próximamente
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- =================================
+    EJEMPLO NES
+    ================================= -->
+
+    <div class="card">
+
+        <img src="https://images.nintendolife.com/5f40f3c26dc66/super-mario-bros.original.jpg">
+
+        <div class="card-content">
+
+            <h3>Mario Retro Collection</h3>
+
+            <div class="console">
+
+                NES
+
+            </div>
+
+            <div class="description">
+
+                Colección de pruebas y ports clásicos optimizados para NES.
+                Proyecto experimental para hardware original.
+
+            </div>
+
+            <div class="status complete">
+
+                DISPONIBLE
+
+            </div>
+
+            <a class="download-btn" href="#">
+
+                Descargar
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+FOOTER
+===================================== -->
+
+<footer class="footer">
+
+    AetherPortsFanmade © 2026 • Proyecto Fanmade
+
+</footer>
+
+</body>
+</html>
