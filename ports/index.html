@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AetherPortsFanmade</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(circle at top,
+    #223a8f 0%,
+    #0a0d1f 40%,
+    #020307 100%);
+
+    color:white;
+
+    font-family:'Inter',sans-serif;
+
+    overflow-x:hidden;
+}
+
+/* ========================================
+NAVBAR
+======================================== */
+
+.navbar{
+
+    width:100%;
+
+    height:82px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 40px;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+}
+
+.logo img{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+}
+
+.logo h1{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:28px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+}
+
+.back-btn{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #5f7dff,
+        #8e5dff
+    );
+
+    padding:14px 24px;
+
+    border-radius:18px;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.back-btn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 25px rgba(124,138,255,.55);
+}
+
+/* ========================================
+HERO
+======================================== */
+
+.hero{
+
+    width:100%;
+
+    padding:100px 25px 60px;
+
+    text-align:center;
+}
+
+.hero h2{
+
+    font-size:78px;
+
+    font-family:'Orbitron',sans-serif;
+
+    font-weight:900;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ffffff,
+        #8eb6ff,
+        #be95ff
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:25px;
+}
+
+.hero p{
+
+    max-width:980px;
+
+    margin:auto;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#d8dcff;
+}
+
+/* ========================================
+PLATFORMS
+======================================== */
+
+.platforms{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:50px;
+}
+
+.platform{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:18px 26px;
+
+    border-radius:20px;
+
+    font-weight:700;
+
+    backdrop-filter:blur(10px);
+
+    transition:.25s;
+}
+
+.platform:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.12);
+}
+
+/* ========================================
+SECTION TITLE
+======================================== */
+
+.section-title{
+
+    text-align:center;
+
+    font-size:46px;
+
+    margin-top:90px;
+
+    margin-bottom:45px;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+/* ========================================
+PORTS GRID
+======================================== */
+
+.ports{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(340px,1fr));
+
+    gap:35px;
+
+    padding:0 35px 90px;
+}
+
+/* ========================================
+CARD
+======================================== */
+
+.card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(12px);
+
+    transition:.35s;
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 0 40px rgba(100,130,255,.35);
+}
+
+.card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+}
+
+.card-content{
+
+    padding:28px;
+}
+
+.card h3{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+}
+
+.console{
+
+    color:#8fb0ff;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+}
+
+.description{
+
+    color:#d4d4d4;
+
+    line-height:1.7;
+
+    margin-bottom:24px;
+}
+
+.status{
+
+    display:inline-block;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    margin-bottom:24px;
+}
+
+.dev{
+
+    background:#ffbf66;
+
+    color:black;
+}
+
+.complete{
+
+    background:#4cff93;
+
+    color:black;
+}
+
+.download-btn{
+
+    display:block;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #5f7dff,
+        #8f5eff
+    );
+
+    padding:17px;
+
+    border-radius:18px;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.download-btn:hover{
+
+    transform:scale(1.03);
+}
+
+/* ========================================
+FOOTER
+======================================== */
+
+.footer{
+
+    width:100%;
+
+    text-align:center;
+
+    padding:45px;
+
+    color:#9da6d8;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+    background:rgba(0,0,0,.22);
+}
+
+/* ========================================
+RESPONSIVE
+======================================== */
+
+@media(max-width:780px){
+
+    .hero h2{
+
+        font-size:48px;
+    }
+
+    .hero p{
+
+        font-size:18px;
+    }
+
+    .navbar{
+
+        padding:0 18px;
+    }
+
+    .logo h1{
+
+        font-size:20px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- =====================================
+NAVBAR
+===================================== -->
+
+<div class="navbar">
+
+    <div class="logo">
+
+        <img src="/icaether.png">
+
+        <h1>AetherPortsFanmade</h1>
+
+    </div>
+
+    <a class="back-btn" href="/">
+
+        Ir a Aether Browser
+
+    </a>
+
+</div>
+
+<!-- =====================================
+HERO
+===================================== -->
+
+<section class="hero">
+
+    <h2>AETHER PORTS</h2>
+
+    <p>
+
+        Descarga ports fanmade de videojuegos para consolas retro y modernas.
+        Todos los proyectos son subidos manualmente por el creador de Aether.
+        Explora juegos adaptados para GBA, NES, Wii, Android y más.
+
+    </p>
+
+    <div class="platforms">
+
+        <div class="platform">🎮 GBA</div>
+
+        <div class="platform">🕹️ NES</div>
+
+        <div class="platform">💿 Wii</div>
+
+        <div class="platform">📱 Android</div>
+
+        <div class="platform">🎲 Nintendo DS</div>
+
+        <div class="platform">🖥️ PC</div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+SECTION TITLE
+===================================== -->
+
+<h2 class="section-title">
+
+    Ports Disponibles
+
+</h2>
+
+<!-- =====================================
+PORTS GRID
+===================================== -->
+
+<section class="ports">
+
+    <!-- =================================
+    FNF GBA
+    ================================= -->
+
+    <div class="card">
+
+        <img src="https://i.ytimg.com/vi/8Y7X2xA0x5Y/maxresdefault.jpg">
+
+        <div class="card-content">
+
+            <h3>Friday Night Funkin'</h3>
+
+            <div class="console">
+
+                Game Boy Advance
+
+            </div>
+
+            <div class="description">
+
+                Port fanmade de Friday Night Funkin para Game Boy Advance.
+                Incluye música sincronizada, gameplay funcional y soporte
+                para hardware GBA real.
+
+            </div>
+
+            <div class="status dev">
+
+                EN DESARROLLO
+
+            </div>
+
+            <a class="download-btn" href="#">
+
+                Próximamente
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- =================================
+    EXAMPLE
+    ================================= -->
+
+    <div class="card">
+
+        <img src="https://images.nintendolife.com/5f40f3c26dc66/super-mario-bros.original.jpg">
+
+        <div class="card-content">
+
+            <h3>Mario Retro Collection</h3>
+
+            <div class="console">
+
+                NES
+
+            </div>
+
+            <div class="description">
+
+                Colección experimental de juegos retro y homebrew
+                adaptados para hardware original de NES.
+
+            </div>
+
+            <div class="status complete">
+
+                DISPONIBLE
+
+            </div>
+
+            <a class="download-btn" href="#">
+
+                Descargar
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+FOOTER
+===================================== -->
+
+<footer class="footer">
+
+    AetherPortsFanmade © 2026 • Proyecto Fanmade
+
+</footer>
+
+</body>
+</html>
