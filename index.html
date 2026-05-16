@@ -7,6 +7,8 @@
 
 <title>Aether Browser</title>
 
+<meta name="theme-color" content="#5d7dff">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -19,15 +21,20 @@
     box-sizing:border-box;
 }
 
+html{
+
+    scroll-behavior:smooth;
+}
+
 body{
 
     min-height:100vh;
 
     background:
     radial-gradient(circle at top,
-    #1c2f73 0%,
-    #090d1d 45%,
-    #010204 100%);
+    #223a8f 0%,
+    #0b1022 45%,
+    #020307 100%);
 
     color:white;
 
@@ -44,7 +51,7 @@ NAVBAR
 
     width:100%;
 
-    height:82px;
+    height:85px;
 
     display:flex;
 
@@ -73,34 +80,38 @@ NAVBAR
 
     align-items:center;
 
-    gap:15px;
+    gap:16px;
 }
 
 .logo img{
 
-    width:58px;
+    width:60px;
 
-    height:58px;
+    height:60px;
 
     border-radius:50%;
+
+    object-fit:cover;
 }
 
 .logo h1{
 
     font-family:'Orbitron',sans-serif;
 
-    font-size:28px;
+    font-size:30px;
 
     font-weight:900;
 
     letter-spacing:2px;
 }
 
-.nav-buttons{
+.nav-links{
 
     display:flex;
 
     gap:16px;
+
+    flex-wrap:wrap;
 }
 
 .nav-btn{
@@ -112,11 +123,11 @@ NAVBAR
     background:
     linear-gradient(
         135deg,
-        #5c7cff,
-        #965dff
+        #5f7dff,
+        #8d5eff
     );
 
-    padding:14px 22px;
+    padding:13px 22px;
 
     border-radius:18px;
 
@@ -127,9 +138,9 @@ NAVBAR
 
 .nav-btn:hover{
 
-    transform:scale(1.05);
+    transform:translateY(-3px);
 
-    box-shadow:0 0 25px rgba(111,135,255,.45);
+    box-shadow:0 0 25px rgba(118,138,255,.45);
 }
 
 /* =========================================
@@ -140,69 +151,69 @@ HERO
 
     width:100%;
 
-    min-height:88vh;
+    min-height:92vh;
 
     display:flex;
 
     flex-direction:column;
 
-    align-items:center;
-
     justify-content:center;
+
+    align-items:center;
 
     text-align:center;
 
-    padding:40px;
+    padding:50px 25px;
 }
 
 .hero img{
 
-    width:170px;
+    width:180px;
 
-    margin-bottom:25px;
+    margin-bottom:30px;
 
-    filter:drop-shadow(0 0 25px rgba(115,139,255,.4));
+    filter:
+    drop-shadow(
+    0 0 35px rgba(130,150,255,.45));
 }
 
 .hero h2{
 
-    font-size:90px;
+    font-size:96px;
 
     font-family:'Orbitron',sans-serif;
 
     font-weight:900;
 
+    line-height:1;
+
     background:
     linear-gradient(
         90deg,
         #ffffff,
-        #8bb8ff,
-        #b88cff
+        #91b3ff,
+        #c69cff
     );
 
     -webkit-background-clip:text;
 
     -webkit-text-fill-color:transparent;
 
-    margin-bottom:25px;
+    margin-bottom:30px;
 }
 
 .hero p{
 
-    max-width:980px;
+    max-width:1050px;
 
     font-size:24px;
 
     line-height:1.8;
 
-    color:#d6dcff;
+    color:#d7deff;
 
-    margin-bottom:40px;
+    margin-bottom:45px;
 }
-
-/* =========================================
-BUTTONS
-========================================= */
 
 .hero-buttons{
 
@@ -215,18 +226,11 @@ BUTTONS
     justify-content:center;
 }
 
-.download-btn{
+.hero-btn{
 
     text-decoration:none;
 
     color:white;
-
-    background:
-    linear-gradient(
-        135deg,
-        #4f7dff,
-        #8f5eff
-    );
 
     padding:18px 34px;
 
@@ -239,75 +243,80 @@ BUTTONS
     transition:.25s;
 }
 
-.download-btn:hover{
+.download{
+
+    background:
+    linear-gradient(
+        135deg,
+        #5f7dff,
+        #8e5dff
+    );
+}
+
+.download:hover{
 
     transform:translateY(-5px);
 
-    box-shadow:0 0 35px rgba(111,135,255,.45);
+    box-shadow:0 0 35px rgba(110,135,255,.45);
 }
 
-.ports-btn{
-
-    text-decoration:none;
-
-    color:white;
+.ports{
 
     background:
     linear-gradient(
         135deg,
         #ff4fd8,
-        #7d6bff
+        #7c69ff
     );
-
-    padding:18px 34px;
-
-    border-radius:22px;
-
-    font-size:18px;
-
-    font-weight:800;
-
-    transition:.25s;
 }
 
-.ports-btn:hover{
+.ports:hover{
 
     transform:translateY(-5px);
 
-    box-shadow:0 0 35px rgba(255,79,216,.4);
+    box-shadow:0 0 35px rgba(255,79,216,.45);
+}
+
+/* =========================================
+SECTION
+========================================= */
+
+.section{
+
+    width:100%;
+
+    padding:40px 30px 100px;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:56px;
+
+    margin-bottom:60px;
+
+    font-family:'Orbitron',sans-serif;
 }
 
 /* =========================================
 CARDS
 ========================================= */
 
-.section-title{
-
-    text-align:center;
-
-    font-size:52px;
-
-    margin-bottom:50px;
-
-    font-family:'Orbitron',sans-serif;
-}
-
 .cards{
 
     width:100%;
 
-    max-width:1400px;
+    max-width:1450px;
 
     margin:auto;
 
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
+    repeat(auto-fit,minmax(340px,1fr));
 
     gap:35px;
-
-    padding:0 35px 100px;
 }
 
 .card{
@@ -316,7 +325,7 @@ CARDS
 
     border:1px solid rgba(255,255,255,.08);
 
-    border-radius:28px;
+    border-radius:30px;
 
     overflow:hidden;
 
@@ -329,26 +338,26 @@ CARDS
 
     transform:translateY(-10px);
 
-    box-shadow:0 0 40px rgba(112,132,255,.35);
+    box-shadow:0 0 40px rgba(109,132,255,.35);
 }
 
 .card img{
 
     width:100%;
 
-    height:230px;
+    height:240px;
 
     object-fit:cover;
 }
 
 .card-content{
 
-    padding:28px;
+    padding:30px;
 }
 
 .card h3{
 
-    font-size:34px;
+    font-size:36px;
 
     margin-bottom:12px;
 }
@@ -357,9 +366,9 @@ CARDS
 
     color:#d4d4d4;
 
-    line-height:1.7;
+    line-height:1.8;
 
-    margin-bottom:24px;
+    margin-bottom:28px;
 }
 
 .card-btn{
@@ -373,11 +382,11 @@ CARDS
     background:
     linear-gradient(
         135deg,
-        #5e7cff,
-        #955eff
+        #5f7dff,
+        #8f5eff
     );
 
-    padding:14px 24px;
+    padding:15px 24px;
 
     border-radius:18px;
 
@@ -392,18 +401,76 @@ CARDS
 }
 
 /* =========================================
+FEATURES
+========================================= */
+
+.features{
+
+    width:100%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+.feature{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    padding:30px;
+
+    border-radius:28px;
+
+    backdrop-filter:blur(12px);
+
+    transition:.25s;
+}
+
+.feature:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.07);
+}
+
+.feature h4{
+
+    font-size:28px;
+
+    margin-bottom:16px;
+}
+
+.feature p{
+
+    color:#d0d0d0;
+
+    line-height:1.8;
+}
+
+/* =========================================
 FOOTER
 ========================================= */
 
 .footer{
 
+    width:100%;
+
     text-align:center;
 
-    padding:45px;
+    padding:50px;
 
-    color:#9ca5d4;
+    color:#9ea6d4;
 
-    border-top:1px solid rgba(255,255,255,.05);
+    border-top:1px solid rgba(255,255,255,.06);
 
     background:rgba(0,0,0,.25);
 }
@@ -412,11 +479,11 @@ FOOTER
 RESPONSIVE
 ========================================= */
 
-@media(max-width:800px){
+@media(max-width:850px){
 
     .hero h2{
 
-        font-size:54px;
+        font-size:58px;
     }
 
     .hero p{
@@ -426,12 +493,17 @@ RESPONSIVE
 
     .navbar{
 
-        padding:0 16px;
+        padding:0 18px;
     }
 
     .logo h1{
 
-        font-size:20px;
+        font-size:22px;
+    }
+
+    .section-title{
+
+        font-size:42px;
     }
 
 }
@@ -454,7 +526,13 @@ NAVBAR
 
     </div>
 
-    <div class="nav-buttons">
+    <div class="nav-links">
+
+        <a class="nav-btn" href="#downloads">
+
+            Descargas
+
+        </a>
 
         <a class="nav-btn" href="/ports">
 
@@ -479,14 +557,15 @@ HERO
     <p>
 
         Navega sin límites con Aether Browser.
-        Un navegador experimental desarrollado en Python con una interfaz
-        moderna, ligera y enfocada en velocidad, minimalismo y libertad.
+        Un navegador experimental creado en Python y diseñado
+        para ofrecer una experiencia moderna, ligera y fluida
+        en Windows y Android.
 
     </p>
 
     <div class="hero-buttons">
 
-        <a class="download-btn"
+        <a class="hero-btn download"
 
         href="https://github.com/soyunmejorproxd-cmd/Aether-APPS/releases">
 
@@ -494,7 +573,9 @@ HERO
 
         </a>
 
-        <a class="ports-btn" href="/ports">
+        <a class="hero-btn ports"
+
+        href="/ports">
 
             Explorar Ports Fanmade
 
@@ -505,104 +586,211 @@ HERO
 </section>
 
 <!-- =====================================
-SECTION TITLE
+DOWNLOADS
 ===================================== -->
 
-<h2 class="section-title">
+<section class="section" id="downloads">
 
-    Plataformas Disponibles
+    <h2 class="section-title">
 
-</h2>
+        Descargas
+
+    </h2>
+
+    <div class="cards">
+
+        <!-- WINDOWS -->
+
+        <div class="card">
+
+            <img src="newaether.png">
+
+            <div class="card-content">
+
+                <h3>Windows</h3>
+
+                <p>
+
+                    Descarga Aether Browser para Windows
+                    7/8/10/11 con interfaz moderna,
+                    navegación basada en PyQt y sistema
+                    de pestañas minimalista.
+
+                </p>
+
+                <a class="card-btn"
+
+                href="https://github.com/soyunmejorproxd-cmd/Aether-APPS/releases">
+
+                    Descargar EXE
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- ANDROID -->
+
+        <div class="card">
+
+            <img src="icaether.png">
+
+            <div class="card-content">
+
+                <h3>Android</h3>
+
+                <p>
+
+                    Version APK experimental de Aether Browser
+                    optimizada para dispositivos Android
+                    y navegación táctil.
+
+                </p>
+
+                <a class="card-btn"
+
+                href="Aether-2.4.apk"
+
+                download>
+
+                    Descargar APK
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- OLD VERSION -->
+
+        <div class="card">
+
+            <img src="icaether.png">
+
+            <div class="card-content">
+
+                <h3>Versiones Antiguas</h3>
+
+                <p>
+
+                    Descarga builds anteriores de Aether
+                    Browser para Android y prueba
+                    distintas versiones experimentales.
+
+                </p>
+
+                <a class="card-btn"
+
+                href="Aether2.3.apk"
+
+                download>
+
+                    Descargar v2.3
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- PORTS -->
+
+        <div class="card">
+
+            <img src="https://i.ytimg.com/vi/8Y7X2xA0x5Y/maxresdefault.jpg">
+
+            <div class="card-content">
+
+                <h3>AetherPortsFanmade</h3>
+
+                <p>
+
+                    Explora ports fanmade de videojuegos
+                    para GBA, NES, Wii, Android y más.
+                    Todos los proyectos son subidos manualmente.
+
+                </p>
+
+                <a class="card-btn"
+
+                href="/ports">
+
+                    Entrar
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- =====================================
-CARDS
+FEATURES
 ===================================== -->
 
-<section class="cards">
+<section class="section">
 
-    <!-- WINDOWS -->
+    <h2 class="section-title">
 
-    <div class="card">
+        Características
 
-        <img src="newaether.png">
+    </h2>
 
-        <div class="card-content">
+    <div class="features">
 
-            <h3>Windows</h3>
+        <div class="feature">
+
+            <h4>⚡ Ligero</h4>
 
             <p>
 
-                Descarga la versión completa de Aether Browser
-                para Windows 7/8/10/11 con interfaz moderna
-                y navegación basada en PyQt.
+                Aether está diseñado para consumir pocos recursos
+                y funcionar fluidamente incluso en PCs antiguas.
 
             </p>
-
-            <a class="card-btn"
-
-            href="https://github.com/soyunmejorproxd-cmd/Aether-APPS/releases">
-
-                Descargar
-
-            </a>
 
         </div>
 
-    </div>
+        <div class="feature">
 
-    <!-- ANDROID -->
-
-    <div class="card">
-
-        <img src="icaether.png">
-
-        <div class="card-content">
-
-            <h3>Android</h3>
+            <h4>🌀 Minimalista</h4>
 
             <p>
 
-                Versiones APK experimentales de Aether Browser
-                adaptadas para Android y dispositivos móviles.
+                Interfaz limpia inspirada en navegadores modernos
+                con enfoque en simplicidad visual.
 
             </p>
-
-            <a class="card-btn"
-
-            href="#">
-
-                Próximamente
-
-            </a>
 
         </div>
 
-    </div>
+        <div class="feature">
 
-    <!-- PORTS -->
-
-    <div class="card">
-
-        <img src="https://i.ytimg.com/vi/8Y7X2xA0x5Y/maxresdefault.jpg">
-
-        <div class="card-content">
-
-            <h3>AetherPortsFanmade</h3>
+            <h4>🧩 Experimental</h4>
 
             <p>
 
-                Explora ports fanmade de videojuegos para GBA,
-                NES, Wii y más subidos por el ecosistema Aether.
+                Proyecto fanmade en constante desarrollo
+                basado en Python y tecnologías web modernas.
 
             </p>
 
-            <a class="card-btn"
+        </div>
 
-            href="/ports">
+        <div class="feature">
 
-                Entrar
+            <h4>🎮 Ecosistema Aether</h4>
 
-            </a>
+            <p>
+
+                Incluye ports fanmade, apps experimentales,
+                APKs Android y más proyectos independientes.
+
+            </p>
 
         </div>
 
