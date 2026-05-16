@@ -7,7 +7,7 @@
 
 <title>AetherPortsFanmade</title>
 
-<meta name="theme-color" content="#7c69ff">
+<meta name="theme-color" content="#6f7cff">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -27,8 +27,8 @@ body{
 
     background:
     radial-gradient(circle at top,
-    #243b94 0%,
-    #0b1022 45%,
+    #1f2d75 0%,
+    #090d1d 45%,
     #020307 100%);
 
     color:white;
@@ -38,9 +38,29 @@ body{
     overflow-x:hidden;
 }
 
-/* ========================================
+/* ====================================
+BACKGROUND FX
+==================================== */
+
+.stars{
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+    radial-gradient(white 1px, transparent 1px);
+
+    background-size:40px 40px;
+
+    opacity:.08;
+
+    pointer-events:none;
+}
+
+/* ====================================
 NAVBAR
-======================================== */
+==================================== */
 
 .navbar{
 
@@ -58,7 +78,7 @@ NAVBAR
 
     background:rgba(0,0,0,.35);
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(14px);
 
     border-bottom:1px solid rgba(255,255,255,.06);
 
@@ -85,8 +105,6 @@ NAVBAR
     height:58px;
 
     border-radius:50%;
-
-    object-fit:cover;
 }
 
 .logo h1{
@@ -110,7 +128,7 @@ NAVBAR
     linear-gradient(
         135deg,
         #5f7dff,
-        #8e5dff
+        #975dff
     );
 
     padding:14px 24px;
@@ -126,43 +144,43 @@ NAVBAR
 
     transform:translateY(-4px);
 
-    box-shadow:0 0 25px rgba(110,135,255,.45);
+    box-shadow:0 0 30px rgba(110,135,255,.35);
 }
 
-/* ========================================
+/* ====================================
 HERO
-======================================== */
+==================================== */
 
 .hero{
 
     width:100%;
 
-    padding:100px 25px 70px;
+    padding:110px 25px 80px;
 
     text-align:center;
 }
 
 .hero h2{
 
-    font-size:82px;
+    font-size:88px;
 
     font-family:'Orbitron',sans-serif;
 
     font-weight:900;
 
+    margin-bottom:25px;
+
     background:
     linear-gradient(
         90deg,
         #ffffff,
-        #8eb6ff,
-        #be95ff
+        #8fb1ff,
+        #d3b6ff
     );
 
     -webkit-background-clip:text;
 
     -webkit-text-fill-color:transparent;
-
-    margin-bottom:25px;
 }
 
 .hero p{
@@ -178,13 +196,11 @@ HERO
     color:#d8dcff;
 }
 
-/* ========================================
+/* ====================================
 PLATFORMS
-======================================== */
+==================================== */
 
 .platforms{
-
-    width:100%;
 
     display:flex;
 
@@ -205,7 +221,7 @@ PLATFORMS
 
     padding:18px 26px;
 
-    border-radius:20px;
+    border-radius:18px;
 
     font-weight:700;
 
@@ -221,32 +237,32 @@ PLATFORMS
     background:rgba(255,255,255,.12);
 }
 
-/* ========================================
+/* ====================================
 SECTION TITLE
-======================================== */
+==================================== */
 
 .section-title{
 
     text-align:center;
 
-    font-size:52px;
+    font-size:56px;
 
-    margin-top:80px;
+    margin-top:40px;
 
     margin-bottom:50px;
 
     font-family:'Orbitron',sans-serif;
 }
 
-/* ========================================
-GRID
-======================================== */
+/* ====================================
+PORTS GRID
+==================================== */
 
 .ports{
 
     width:100%;
 
-    max-width:1450px;
+    max-width:1350px;
 
     margin:auto;
 
@@ -260,9 +276,9 @@ GRID
     padding:0 35px 100px;
 }
 
-/* ========================================
+/* ====================================
 CARD
-======================================== */
+==================================== */
 
 .card{
 
@@ -283,7 +299,7 @@ CARD
 
     transform:translateY(-10px);
 
-    box-shadow:0 0 40px rgba(111,132,255,.35);
+    box-shadow:0 0 45px rgba(111,132,255,.35);
 }
 
 .card img{
@@ -302,7 +318,7 @@ CARD
 
 .card h3{
 
-    font-size:36px;
+    font-size:38px;
 
     margin-bottom:10px;
 }
@@ -338,21 +354,37 @@ CARD
     font-weight:800;
 
     margin-bottom:25px;
-}
-
-.dev{
 
     background:#ffbf66;
 
     color:black;
 }
 
-.complete{
+/* ====================================
+VIDEO
+==================================== */
 
-    background:#4cff93;
+.video-box{
 
-    color:black;
+    margin-bottom:25px;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
 }
+
+.video-box iframe{
+
+    width:100%;
+
+    height:240px;
+}
+
+/* ====================================
+BUTTON
+==================================== */
 
 .download-btn{
 
@@ -371,7 +403,7 @@ CARD
         #8f5eff
     );
 
-    padding:17px;
+    padding:18px;
 
     border-radius:18px;
 
@@ -387,9 +419,9 @@ CARD
     box-shadow:0 0 25px rgba(110,135,255,.35);
 }
 
-/* ========================================
+/* ====================================
 FOOTER
-======================================== */
+==================================== */
 
 .footer{
 
@@ -406,9 +438,9 @@ FOOTER
     background:rgba(0,0,0,.22);
 }
 
-/* ========================================
+/* ====================================
 RESPONSIVE
-======================================== */
+==================================== */
 
 @media(max-width:780px){
 
@@ -438,9 +470,11 @@ RESPONSIVE
 </head>
 <body>
 
-<!-- =====================================
+<div class="stars"></div>
+
+<!-- ====================================
 NAVBAR
-===================================== -->
+==================================== -->
 
 <div class="navbar">
 
@@ -460,9 +494,9 @@ NAVBAR
 
 </div>
 
-<!-- =====================================
+<!-- ====================================
 HERO
-===================================== -->
+==================================== -->
 
 <section class="hero">
 
@@ -470,9 +504,9 @@ HERO
 
     <p>
 
-        Descarga ports fanmade de videojuegos para consolas retro y modernas.
-        Todos los proyectos son subidos manualmente por el creador de Aether.
-        Explora juegos adaptados para GBA, NES, Wii, Android y más.
+        Descarga ports fanmade experimentales para consolas retro,
+        handhelds y plataformas modernas. Todos los proyectos son
+        publicados manualmente por el creador de Aether.
 
     </p>
 
@@ -486,7 +520,7 @@ HERO
 
         <div class="platform">📱 Android</div>
 
-        <div class="platform">🎲 Nintendo DS</div>
+        <div class="platform">🎲 DS</div>
 
         <div class="platform">🖥️ PC</div>
 
@@ -494,9 +528,9 @@ HERO
 
 </section>
 
-<!-- =====================================
+<!-- ====================================
 TITLE
-===================================== -->
+==================================== -->
 
 <h2 class="section-title">
 
@@ -504,9 +538,9 @@ TITLE
 
 </h2>
 
-<!-- =====================================
+<!-- ====================================
 PORTS GRID
-===================================== -->
+==================================== -->
 
 <section class="ports">
 
@@ -516,7 +550,7 @@ PORTS GRID
 
     <div class="card">
 
-        <img src="https://i.ytimg.com/vi/8Y7X2xA0x5Y/maxresdefault.jpg">
+        <img src="https://i.ytimg.com/vi/2VyUOxLU6qA/maxresdefault.jpg">
 
         <div class="card-content">
 
@@ -537,11 +571,26 @@ PORTS GRID
 
             </div>
 
-            <div class="status dev">
+            <div class="status">
 
                 BETA EN DESARROLLO
 
             </div>
+
+            <!-- VIDEO -->
+
+            <div class="video-box">
+
+                <iframe
+                src="https://www.youtube.com/embed/2VyUOxLU6qA"
+                title="FNF GBA Gameplay"
+                frameborder="0"
+                allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <!-- DOWNLOAD -->
 
             <a class="download-btn"
 
@@ -557,58 +606,15 @@ PORTS GRID
 
     </div>
 
-    <!-- =================================
-    EXAMPLE NES
-    ================================= -->
-
-    <div class="card">
-
-        <img src="https://images.nintendolife.com/5f40f3c26dc66/super-mario-bros.original.jpg">
-
-        <div class="card-content">
-
-            <h3>Mario Retro Collection</h3>
-
-            <div class="console">
-
-                NES
-
-            </div>
-
-            <div class="description">
-
-                Colección experimental de juegos retro y homebrew
-                adaptados para hardware original de NES.
-
-            </div>
-
-            <div class="status complete">
-
-                DISPONIBLE
-
-            </div>
-
-            <a class="download-btn"
-
-            href="#">
-
-                Descargar
-
-            </a>
-
-        </div>
-
-    </div>
-
 </section>
 
-<!-- =====================================
+<!-- ====================================
 FOOTER
-===================================== -->
+==================================== -->
 
 <footer class="footer">
 
-    Aether APPS © 2026 • Proyecto Fanmade
+    AetherPortsFanmade © 2026 • Proyecto Fanmade
 
 </footer>
 
