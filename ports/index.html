@@ -7,6 +7,8 @@
 
 <title>AetherPortsFanmade</title>
 
+<meta name="theme-color" content="#7c69ff">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -25,8 +27,8 @@ body{
 
     background:
     radial-gradient(circle at top,
-    #223a8f 0%,
-    #0a0d1f 40%,
+    #243b94 0%,
+    #0b1022 45%,
     #020307 100%);
 
     color:white;
@@ -44,7 +46,7 @@ NAVBAR
 
     width:100%;
 
-    height:82px;
+    height:84px;
 
     display:flex;
 
@@ -58,7 +60,7 @@ NAVBAR
 
     backdrop-filter:blur(12px);
 
-    border-bottom:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.06);
 
     position:sticky;
 
@@ -78,9 +80,9 @@ NAVBAR
 
 .logo img{
 
-    width:56px;
+    width:58px;
 
-    height:56px;
+    height:58px;
 
     border-radius:50%;
 
@@ -122,9 +124,9 @@ NAVBAR
 
 .back-btn:hover{
 
-    transform:scale(1.05);
+    transform:translateY(-4px);
 
-    box-shadow:0 0 25px rgba(124,138,255,.55);
+    box-shadow:0 0 25px rgba(110,135,255,.45);
 }
 
 /* ========================================
@@ -135,14 +137,14 @@ HERO
 
     width:100%;
 
-    padding:100px 25px 60px;
+    padding:100px 25px 70px;
 
     text-align:center;
 }
 
 .hero h2{
 
-    font-size:78px;
+    font-size:82px;
 
     font-family:'Orbitron',sans-serif;
 
@@ -165,7 +167,7 @@ HERO
 
 .hero p{
 
-    max-width:980px;
+    max-width:1000px;
 
     margin:auto;
 
@@ -192,7 +194,7 @@ PLATFORMS
 
     gap:18px;
 
-    margin-top:50px;
+    margin-top:55px;
 }
 
 .platform{
@@ -227,35 +229,35 @@ SECTION TITLE
 
     text-align:center;
 
-    font-size:46px;
+    font-size:52px;
 
-    margin-top:90px;
+    margin-top:80px;
 
-    margin-bottom:45px;
+    margin-bottom:50px;
 
     font-family:'Orbitron',sans-serif;
 }
 
 /* ========================================
-PORTS GRID
+GRID
 ======================================== */
 
 .ports{
 
     width:100%;
 
-    max-width:1400px;
+    max-width:1450px;
 
     margin:auto;
 
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(340px,1fr));
+    repeat(auto-fit,minmax(350px,1fr));
 
     gap:35px;
 
-    padding:0 35px 90px;
+    padding:0 35px 100px;
 }
 
 /* ========================================
@@ -279,9 +281,9 @@ CARD
 
 .card:hover{
 
-    transform:translateY(-12px);
+    transform:translateY(-10px);
 
-    box-shadow:0 0 40px rgba(100,130,255,.35);
+    box-shadow:0 0 40px rgba(111,132,255,.35);
 }
 
 .card img{
@@ -295,12 +297,12 @@ CARD
 
 .card-content{
 
-    padding:28px;
+    padding:30px;
 }
 
 .card h3{
 
-    font-size:34px;
+    font-size:36px;
 
     margin-bottom:10px;
 }
@@ -318,7 +320,7 @@ CARD
 
     color:#d4d4d4;
 
-    line-height:1.7;
+    line-height:1.8;
 
     margin-bottom:24px;
 }
@@ -335,7 +337,7 @@ CARD
 
     font-weight:800;
 
-    margin-bottom:24px;
+    margin-bottom:25px;
 }
 
 .dev{
@@ -381,6 +383,8 @@ CARD
 .download-btn:hover{
 
     transform:scale(1.03);
+
+    box-shadow:0 0 25px rgba(110,135,255,.35);
 }
 
 /* ========================================
@@ -410,7 +414,7 @@ RESPONSIVE
 
     .hero h2{
 
-        font-size:48px;
+        font-size:52px;
     }
 
     .hero p{
@@ -491,7 +495,7 @@ HERO
 </section>
 
 <!-- =====================================
-SECTION TITLE
+TITLE
 ===================================== -->
 
 <h2 class="section-title">
@@ -526,21 +530,26 @@ PORTS GRID
 
             <div class="description">
 
-                Port fanmade de Friday Night Funkin para Game Boy Advance.
-                Incluye música sincronizada, gameplay funcional y soporte
-                para hardware GBA real.
+                Port fanmade experimental de Friday Night Funkin
+                para Game Boy Advance. Incluye gameplay funcional,
+                música sincronizada y soporte para hardware GBA real.
+                Esta build corresponde a una beta en desarrollo.
 
             </div>
 
             <div class="status dev">
 
-                EN DESARROLLO
+                BETA EN DESARROLLO
 
             </div>
 
-            <a class="download-btn" href="#">
+            <a class="download-btn"
 
-                Próximamente
+            href="/funkin-advance.gba"
+
+            download>
+
+                Descargar Beta .GBA
 
             </a>
 
@@ -549,7 +558,7 @@ PORTS GRID
     </div>
 
     <!-- =================================
-    EXAMPLE
+    EXAMPLE NES
     ================================= -->
 
     <div class="card">
@@ -579,7 +588,9 @@ PORTS GRID
 
             </div>
 
-            <a class="download-btn" href="#">
+            <a class="download-btn"
+
+            href="#">
 
                 Descargar
 
@@ -597,7 +608,7 @@ FOOTER
 
 <footer class="footer">
 
-    AetherPortsFanmade © 2026 • Proyecto Fanmade
+    Aether APPS © 2026 • Proyecto Fanmade
 
 </footer>
 
